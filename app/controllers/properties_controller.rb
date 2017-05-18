@@ -16,12 +16,13 @@ class PropertiesController < ApplicationController
   end
 #POST/properties
   def create 
-  	@property =Property.new ({ tipo: params[:property][:tipo],
-  							direccion: params[:property][:direccion], 
-  							precio: params[:property][:precio],
-  							descripcion: params[:property][:descripcion]})
+  	@property =Property.new (property_params)
+    @property.services = params[:services]
   	@property.save
   	redirect_to @property
   end
 	 
+   def property_params
+    params.require(:property).permit(:descripcion,:direccion,:precio,:tipo,:services)
+   end
 end
