@@ -1,5 +1,8 @@
 <!-- Page Content -->
-
+<%= form_tag propertys_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Buscar" %>
+<% end %>
     <div class="container">
                         <p> djasdhsjbs </p>
             <p> djasdhsjbs </p>
