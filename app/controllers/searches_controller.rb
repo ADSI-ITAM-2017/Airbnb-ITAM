@@ -2,7 +2,7 @@ class SearchesController < ApplicationController
   
   def new
     @search = Search.new
-    @tipos = Property.uniq.pluck(:tipo)
+    #@tipos = Property.uniq.pluck(:tipo)
   end
   
   def create
