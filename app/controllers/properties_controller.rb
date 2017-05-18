@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
 	 
 	 #GET /properties
 	 def index
-  	@properties = Property.all
+  	@properties = Property..where(["descripcion LIKE ?","%{params[:search]}%"])
   end
 
   #GET /properties/:id
