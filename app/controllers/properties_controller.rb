@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
 	 
 	 #GET /properties
 	 def index
-  	@properties = Property.search
+  	@properties = Property.search(params[:search])
   end
 
   #GET /properties/:id
