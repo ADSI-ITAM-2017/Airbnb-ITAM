@@ -11411,6 +11411,7 @@ Completed 200 OK in 157ms (Views: 154.0ms | ActiveRecord: 0.0ms)
 >>>>>>> 6e25af089210f21c3ee3aa0808cbac9862b6355b
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-05-18 07:35:47 -0500
   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by HomeController#index as HTML
@@ -13215,3 +13216,55 @@ Processing by PropertiesController#show as HTML
 Completed 200 OK in 293ms (Views: 278.5ms | ActiveRecord: 1.8ms)
 
 
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSearches (20170518125410)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "keywords" varchar, "direccion" varchar, "descripcion" varchar, "maxPrice" decimal, "tipo" varchar, "servicios" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170518125410"]]
+  [1m[35m (63.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_services_on_service_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_services_on_service_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_services_on_property_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_services_on_property_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_images_on_property_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_images_on_property_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+>>>>>>> f276bcfacf80a5cad3b0e3a69a0400625ec0fb24

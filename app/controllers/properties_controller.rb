@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
 	 
 	 #GET /properties
 	 def index
-  	@properties = Property.all
+  	@properties = Property.search(params[:search])
   end
 
   #GET /properties/:id
@@ -22,7 +22,11 @@ class PropertiesController < ApplicationController
   	redirect_to @property
   end
 	 
+<<<<<<< HEAD
    def property_params
     params.require(:property).permit(:descripcion,:direccion,:precio,:tipo,:services)
    end
 end
+=======
+end
+>>>>>>> f276bcfacf80a5cad3b0e3a69a0400625ec0fb24

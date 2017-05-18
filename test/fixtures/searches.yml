@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  direccion: MyString
+  descripcion: MyString
+  maxPrice: 9.99
+  tipo: MyString
+  servicios: MyString
+
+two:
+  keywords: MyString
+  direccion: MyString
+  descripcion: MyString
+  maxPrice: 9.99
+  tipo: MyString
+  servicios: MyString

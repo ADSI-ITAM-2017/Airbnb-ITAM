@@ -1,4 +1,4 @@
-<!-- Page Content -->
+<!-- Propiedades -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,6 +47,13 @@
             <div class="col-md-9">
 
                 <div class="row">
+                    <%= form_tag properties_path, :method => 'get' do %>
+                      <%= text_field_tag :search, params[:search] %>
+                      <%= submit_tag "Search" %>
+                    <% end %>
+                    
+                    <%= link_to "Advanced Search". new_search_path %>
+                    
                     <% @properties.each do |property|%>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
